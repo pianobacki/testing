@@ -19,6 +19,28 @@ def test_sine_wave():
     out = find_maxima(inp)
     exp = [16,78]
     assert exp == out
+    
+    
+def test_max_on_both_borders():
+    inp = [4, 2, 1, 3, 1, 2]
+    out = find_maxima(inp)
+    exp = [0,3,5]
+    assert exp == out
+
+def test_max_on_both_borders_absolute_max_on_right_border():
+    inp = [4, 2, 1, 3, 1, 5]
+    out = find_maxima(inp)
+    exp = [0,3,5]
+    assert exp == out
+    
+def test_one_max_absolute_on_left_border():
+    inp = [4, 2, 1, 3, 1]
+    out = find_maxima(inp)
+    exp = [0,3]
+    assert exp == out
+    
+    
+    
 
 # additional tests for
 # - max on both borders
